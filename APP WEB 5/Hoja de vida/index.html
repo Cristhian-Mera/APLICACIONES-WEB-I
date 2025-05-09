@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Cristhian Mera</title>
+    <style>
+        /* 
+        === ESTILOS BÁSICOS ===
+        Estos estilos se aplican a todos los elementos y establecen las bases del diseño
+        */
+        * {
+            margin: 0;            
+            padding: 0;           
+            box-sizing: border-box; 
+            font-family: Arial, sans-serif; 
+        }
+        
+        body {
+            background-color: #f5f5f5; 
+            color: #333;             
+            line-height: 1.6;         
+        }
+        
+        .container {
+            width: 90%;              
+            max-width: 1000px;       
+            margin: 0 auto;          
+            padding: 15px;          
+        }
+        
+        /* 
+        === ENCABEZADO ===
+        Estilos para la sección superior con el nombre y título
+        */
+        .header {
+            background-color: #4CAF50; 
+            color: white;              
+            padding: 30px 0;           
+            margin-bottom: 20px;       
+            text-align: center;        
+        }
+        
+        .header h1 {
+            font-size: 36px;           
+            margin-bottom: 10px;       
+        }
+        
+        .header h2 {
+            font-size: 20px;           
+            font-weight: normal;       
+        }
+        
+        /* 
+        === SECCIONES GENERALES ===
+        Estilos comunes para todas las secciones principales
+        */
+        .section {
+            background-color: white;   
+            border-radius: 5px;        
+            padding: 20px;             
+            margin-bottom: 20px;       
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+        }
+        
+        .section-title {
+            color: #4CAF50;            
+            font-size: 24px;           
+            margin-bottom: 15px;       
+            border-bottom: 2px solid #e0e0e0; 
+            padding-bottom: 10px;      
+        }
+        
+        /* 
+        === DATOS PERSONALES ===
+        Estilos para la sección de información personal y foto
+        */
+        .personal-info {
+            display: flex;             
+            flex-wrap: wrap;           
+            gap: 20px;                 
+        }
+        
+        .photo-container {
+            width: 180px;              
+            display: flex;             
+            justify-content: center;   
+            align-items: center;      
+            margin-bottom: 15px;       
+        }
+        
+        .photo {
+            width: 100%;               
+            max-width: 180px;          
+            height: auto;             
+            object-fit: cover;         
+            border-radius: 8px;        
+            border: 4px solid #4CAF50; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        }
+        
+        .info-details {
+            flex: 1;                  
+            min-width: 250px;          
+            display: grid;             
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 15px;                
+        }
+        
+        .info-item {
+            background-color: #f9f9f9; 
+            padding: 12px;             
+            border-radius: 5px;        
+            border-left: 3px solid #4CAF50; 
+        }
+        
+        .info-item label {
+            font-weight: bold;        
+            display: block;            
+            color: #4CAF50;           
+            margin-bottom: 5px;        
+        }
+        
+        .info-item p {
+            color: #555;               
+            word-break: break-word;    
+            overflow-wrap: break-word; 
+        }
+        
+        /* 
+        === ESTUDIOS ===
+        Estilos para la sección de educación
+        */
+        .education-item {
+            margin-bottom: 15px;       
+            padding-left: 15px;        
+            border-left: 3px solid #4CAF50; 
+        }
+        
+        .education-item h3 {
+            color: #333;               
+            margin-bottom: 5px;        
+        }
+        
+        .education-item .institution {
+            color: #666;               
+        }
+        
+        .education-item .years {
+            color: #888;               
+            font-size: 14px;           
+        }
+        
+        /* 
+        === CAPACITACIONES ===
+        Estilos para la sección de certificaciones
+        */
+        .certifications {
+            display: flex;            
+            flex-wrap: wrap;          
+            gap: 15px;               
+        }
+        
+        .certification-item {
+            background-color: #f9f9f9; 
+            padding: 15px;             
+            border-radius: 5px;        
+            width: calc(50% - 15px);   
+            min-width: 200px;         
+        }
+        
+        .certification-item h3 {
+            color: #333;             
+            margin-bottom: 5px;      
+        }
+        
+        .certification-item .provider {
+            color: #666;              
+        }
+        
+        .certification-item .year {
+            color: #888;             
+            font-size: 14px;         
+        }
+        
+        /* 
+        === REFERENCIAS - TABLA ===
+        Estilos para la tabla de referencias personales
+        */
+        table {
+            width: 100%;               
+            border-collapse: collapse; 
+        }
+        
+        th {
+            background-color: #4CAF50; 
+            color: white;              
+            text-align: left;        
+            padding: 10px;            
+        }
+        
+        td {
+            padding: 10px;          
+            border-bottom: 1px solid #e0e0e0; 
+        }
+        
+        /* 
+        === PIE DE PÁGINA ===
+        Estilos para el footer
+        */
+        .footer {
+            background-color: #333;    
+            color: white;             
+            text-align: center;       
+            padding: 20px 0;          
+            margin-top: 20px;         
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    === ENCABEZADO ===
+    Sección superior con nombre y título
+    -->
+    <div class="header">
+        <div class="container">
+            <h1>Cristhian Mera</h1>
+            <h2>Hoja de vida personal</h2>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- 
+        === DATOS PERSONALES ===
+        Sección con foto e información personal
+        -->
+        <div class="section">
+            <h2 class="section-title">Datos Personales</h2>
+            <div class="personal-info">
+                <!-- Contenedor de la foto -->
+                <div class="photo-container">
+                    <img src="image.png" alt="Foto de perfil" class="photo">
+                </div>
+                <!-- Detalles personales organizados en grid -->
+                <div class="info-details">
+                    <div class="info-item">
+                        <label>Nombre completo:</label>
+                        <p>Cristhian Leandro Mera Zambrano</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Fecha de nacimiento:</label>
+                        <p>17 de enero de 2004</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Dirección:</label>
+                        <p>Calle 219 Av 320 y 321, Manta</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Teléfono:</label>
+                        <p>+593 989054603</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Correo electrónico:</label>
+                        <p>e1316665759@live.uleam.edu.ec</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Numero de identificación:</label>
+                        <p>1316665759</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 
+        === ESTUDIOS REALIZADOS ===
+        Sección con historial académico
+        -->
+        <div class="section">
+            <h2 class="section-title">Estudios Realizados</h2>
+            <!-- Primer estudio - Universidad -->
+            <div class="education-item">
+                <h3>Ingeniería en Tecnologias de la Informacion</h3>
+                <p class="institution">Universidad Laica Eloy Alfaro De Manabi</p>
+                <p class="institution"> <em>En proceso</em></p>
+                <p class="years">2021 - 2025</p>
+            </div>
+            <!-- Segundo estudio - Bachillerato -->
+            <div class="education-item">
+                <h3>Bachillerato en Ciencias</h3>
+                <p class="institution">Unidad Educativa Fiscal Paquisha</p>
+                <p class="years">2019 - 2021</p>
+            </div>
+        </div>
+        
+        <!-- 
+        === CAPACITACIONES ===
+        Sección con certificaciones y cursos
+        -->
+        <div class="section">
+            <h2 class="section-title">Capacitaciones</h2>
+            <div class="certifications">
+                <!-- Primera certificación -->
+                <div class="certification-item">
+                    <h3>Analisis y Diseño de Base de Datos</h3>
+                    <p class="provider">Udemy</p>
+                    <p class="year">2024</p>
+                </div>
+                <!-- Segunda certificación -->
+                <div class="certification-item">
+                    <h3>Convencion Internacional de Ciencias de la Vida y Tecnologias</h3>
+                    <p class="provider">FCVT</p>
+                    <p class="year">2024</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 
+        === REFERENCIAS PERSONALES ===
+        Sección con tabla de contactos de referencia
+        -->
+        <div class="section">
+            <h2 class="section-title">Referencias Personales</h2>
+            <table>
+                <!-- Encabezados de la tabla -->
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Cargo/Profesión</th>
+                        <th>Teléfono</th>
+                        <th>Correo Electrónico</th>
+                    </tr>
+                </thead>
+                <!-- Cuerpo de la tabla con los datos -->
+                <tbody>
+                    <tr>
+                        <td>Jose Alonzo </td>
+                        <td>Estudiante</td>
+                        <td>+593 98 772 3197</td>
+                        <td>e1317259966@live.uleam.edu.ec</td>
+                    </tr>
+                    <tr>
+                        <td>Cristhian Chavez </td>
+                        <td>Estudiante</td>
+                        <td>+593 99 854 5406</td>
+                        <td>e1351687015@live.uleam.edu.ec</td>
+                    </tr>
+                    <tr>
+                        <td>Miguel Barragan</td>
+                        <td>Estudiante</td>
+                        <td>+593 93 968 9272</td>
+                        <td>e1350613533@live.uleam.edu.ec</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- 
+    === PIE DE PÁGINA ===
+    Sección final con información de copyright
+    -->
+    <div class="footer">
+        <div class="container">
+            <p>© 2025 Cristhian Mera. Todos los derechos reservados.</p>
+            <p>Esta hoja de vida fue creada con HTML y CSS.</p>
+        </div>
+    </div>
+</body>
+</html>
