@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Pizarra</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="pizarra">
+        <h1>Calculadora de Operaciones</h1>
+        
+        <div class="contenido">
+            <div class="numeros">
+                <div class="numero">
+                    <label>Número 1:</label>
+                    <input type="number" id="numero1">
+                </div>
+                
+                <div class="numero">
+                    <label>Número 2:</label>
+                    <input type="number" id="numero2">
+                </div>
+                
+                <button onclick="calcular()">Calcular</button>
+            </div>
+            
+            <div class="linea-divisoria"></div>
+            
+            <div id="resultados">
+                <p class="instruccion">Escribe dos números y presiona calcular</p>
+            </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+/* Estilo general de la página */
+body {
+    background-color: #f5f5f5;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilo de la pizarra */
+.pizarra {
+    background-color: #5a4db4; /* Verde pizarra */
+    color: white;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: relative;
+}
+
+/* Estilo del título */
+h1 {
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+    padding-bottom: 10px;
+}
+
+/* Contenido principal */
+.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sección de entrada de números */
+.numeros {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.numero {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-size: 18px;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Courier New', monospace;
+}
+
+button {
+    background-color: #f0c808;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ffd700;
+}
+
+/* Línea divisoria */
+.linea-divisoria {
+    border-top: 2px dashed rgba(255, 255, 255, 0.5);
+    margin: 10px 0;
+}
+
+/* Sección de resultados */
+#resultados {
+    min-height: 200px;
+}
+
+.instruccion {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+/* Estilo para cada resultado */
+.resultado {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 3px solid;
+}
+
+/* Colores para cada operación */
+.suma { border-color: #f0c808; } 
+.resta { border-color: #ff6b6b; } 
+.multiplicacion { border-color: #48dbfb; } 
+.division { border-color: #1dd1a1; } 
+.modulo { border-color: #f368e0; } 
+
+</style>
