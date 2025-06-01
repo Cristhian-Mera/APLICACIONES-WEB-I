@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residencias ULEAM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="index-page">
+    <div class="main-container">
+        <div class="container">
+            <!-- Logo y título -->
+            <div class="logo-section">
+                <img src="public/logo.png" alt="ULEAM" class="logo-img">
+                <h1>ULEAM Residencias</h1>
+                <p>Sistema de Gestión Estudiantil</p>
+            </div>
+
+            <!-- Grid principal -->
+            <div class="content-grid">
+                <!-- Residencias -->
+                <div class="residencias-section">
+                    <h2>🏠 Nuestras Residencias</h2>
+                    
+                    <div class="residencias-container">
+                        <div class="residencia-card norte">
+                            <div class="card-header">
+                                <span class="card-icon">🏢</span>
+                                <h3>Complejo Norte</h3>
+                            </div>
+                            <p>Habitaciones individuales</p>
+                            <div class="requirement">Promedio ≥ 8.5</div>
+                        </div>
+
+                        <div class="residencia-card sur">
+                            <div class="card-header">
+                                <span class="card-icon">🏘️</span>
+                                <h3>Complejo Sur</h3>
+                            </div>
+                            <p>Habitaciones compartidas</p>
+                            <div class="requirement">Promedio ≥ 7.5</div>
+                        </div>
+
+                        <div class="residencia-card premium">
+                            <div class="card-header">
+                                <span class="card-icon">🏨</span>
+                                <h3>Complejo Premium</h3>
+                            </div>
+                            <p>Suites ejecutivas</p>
+                            <div class="requirement">Promedio ≥ 9.0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Login -->
+                <div class="login-section">
+                    <div class="login-header">
+                        <h2>🔐 Acceso al Sistema</h2>
+                    </div>
+                    
+                    <form id="loginForm">
+                        <!-- Selector de usuario -->
+                        <div class="user-type-selector">
+                            <button type="button" class="user-type-btn active" data-type="student" onclick="selectUserType('student')">
+                                👨‍🎓 Estudiante
+                            </button>
+                            <button type="button" class="user-type-btn" data-type="admin" onclick="selectUserType('admin')">
+                                👨‍💼 Administrador
+                            </button>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="email" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Contraseña</label>
+                            <input type="password" id="password" value="123456" readonly>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Ingresar al Sistema
+                        </button>
+                    </form>
+
+                    <!-- Info de credenciales -->
+                    <div class="login-info">
+                        <div class="info-item">
+                            <strong>👨‍🎓 Estudiante:</strong> estudiante@uleam.edu.ec
+                        </div>
+                        <div class="info-item">
+                            <strong>👨‍💼 Admin:</strong> admin@uleam.edu.ec
+                        </div>
+                        <div class="info-item">
+                            <strong>🔑 Contraseña:</strong> 123456
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
