@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3367D6">
+  <title>Mi PWA To-Do</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="description" content="Lista de tareas offline con PWA">
+</head>
+<body>
+  <div class="container">
+    <h1>📝 Mi Lista de Tareas PWA</h1>
+    
+
+    <form id="todo-form">
+      <input type="text" id="new-task" placeholder="Escribe una tarea..." required>
+      <button type="submit">Agregar</button>
+    </form>
+
+    <ul id="task-list"></ul>
+    
+    <div id="empty-state">
+      <p>No hay tareas aún. ¡Agrega tu primera tarea!</p>
+    </div>
+
+    
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
